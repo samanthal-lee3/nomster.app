@@ -1,10 +1,10 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This app was created to allow allow local users to contribute to a community database of delicious food resources in the Lakewood area.
 
-Things you may want to cover:
 
+App Details:
+ 
 * Ruby version
 
 * System dependencies
