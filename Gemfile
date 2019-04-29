@@ -78,5 +78,5 @@ gem 'simple_form'
 gem 'font-awesome-rails'
 
 gem 'devise'
-
-
+gem 'geocoder'
+gem 'figaro'
