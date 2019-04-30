@@ -4,12 +4,6 @@
   <br/><br>
   <p><%= @place.description %></p>
 
- <style>
-    #map {
-      height: 300%;
-    }
-  </style>
-
   <script>
 
     function initMap() {
@@ -29,15 +23,10 @@
   </script>
 
   <script async defer
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7Hd6Cfu2R6ZKDe3utOg6YZSAWgzwhyHk&callback=initMap">
+  src="https://maps.googleapis.com/maps/api/js?key=GEOCODER_API_KEY&callback=initMap">
   </script>
 
 <div id="map"></div>
-
-
- 
-   
-</div>
 
   <div class="float-right">
     <% if current_user && current_user == @place.user %>
