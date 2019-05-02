@@ -4,12 +4,11 @@
   <br/><br>
   <p><%= @place.description %></p>
 
-  <% if @place.latitude.present? && @place.longitude.present? %>
-
+  
   <script>
 
     function initMap() {
-      var myLatLng = {lat: -34, lng: 54};
+      var myLatLng = {lat: <%= @place.latitude %>, lng: <%= @place.longitude %>};
 
       var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 12,
@@ -22,15 +21,14 @@
         title: 'Hello World!'
       });
     }
-
   </script>
+
   <script async defer
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7Hd6Cfu2R6ZKDe3utOg6YZSAWgzwhyHk&
-  callback=initMap">
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCK8orRHOueyRVS6xDhunD_KgwFCVPYpWc&callback=initMap">
   </script>
 
-  <div id="map"></div>
-<% end %>
+<div id="map"></div>
+
 
 <br />
 
@@ -39,8 +37,8 @@
      <%= link_to 'Edit Place', edit_place_path(@place), class: 'btn btn-primary' %>
     <%= link_to 'Remove Place', place_path(@place), method: :delete, data:{confirm: 'Are you sure you want to delete this?'}, class: 'btn btn-danger' %>
     <% end %>
+
   </div>
   <br />
   <br />
 </div>
-
