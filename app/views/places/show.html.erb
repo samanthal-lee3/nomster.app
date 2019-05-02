@@ -9,7 +9,7 @@
   <script>
 
     function initMap() {
-      var myLatLng = {lat: <%= @place.latitude %>, lng: <%= @place.longitude %>};
+      var myLatLng = {lat: -34, lng: 54};
 
       var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 12,
@@ -22,14 +22,14 @@
         title: 'Hello World!'
       });
     }
-  </script>
 
+  </script>
   <script async defer
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7Hd6Cfu2R6ZKDe3utOg6YZSAWgzwhyHk
-&callback=initMap">
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7Hd6Cfu2R6ZKDe3utOg6YZSAWgzwhyHk&
+  callback=initMap">
   </script>
 
-<div id="map"></div>
+  <div id="map"></div>
 <% end %>
 
 <br />
