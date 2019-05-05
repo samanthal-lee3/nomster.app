@@ -9,4 +9,13 @@
     <% end %>
 </div>
 
+<div class = "booyah-box col-10 offset-1">
+  <h1> Upload a Photo </h1>
+    <%= simple_form_for @photo do |f| %>
+      <%= f.input :caption %>
+      <br />
+      <%= f.submit 'Upload', class: 'btn btn-info' %>
+    <%end%>
+</div>
+
 
