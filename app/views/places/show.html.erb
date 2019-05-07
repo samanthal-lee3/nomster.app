@@ -4,6 +4,10 @@
   <br/><br>
   <p><%= @place.description %></p>
 
+  <% @place.photos.each do |photo| %>
+    <%= image_tag photo.file.url %>
+    <%= photo.caption %>
+  <% end %>
   
   <script>
 
@@ -42,6 +46,32 @@
   <br />
   <br />
 </div>
+
+
+
+
+<div class="clear"></div>
+<br />
+<br />
+<h1 class="float-left">Photo Uploads</h1>
+<div class="clear"></div>
+<br />
+
+<div>
+  <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
+  <%= f.input :file %>
+  <%= f.input :caption %>
+  <%= f.submit "Add a Photo", class: 'btn btn-primary' %>
+  <% end %>
+</div>
+
+
+<div class="col-10 offset -1">
+<button type="button" class="btn btn-primary btn-lg">
+Add a Photo
+</button>
+
+
 
 <div class="clear"></div>
 <br />
@@ -102,12 +132,12 @@ Add a Comment
   </div>
 </div>
 
-<div>
-  <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
-  <%= f.input :file %>
-  <%= f.input :caption %>
-  <% end %>
-</div>
+
+
+
+
+
+
 
 
 
