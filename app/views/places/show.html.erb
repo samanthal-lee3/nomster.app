@@ -4,7 +4,7 @@
   <br/><br>
   <p><%= @place.description %></p>
 
-  <% @place.photos.each do |photo| %>
+ <% @place.photos.each do |photo| %>
     <%= image_tag photo.file.url %>
     <%= photo.caption %>
   <% end %>
@@ -64,12 +64,6 @@
   <%= f.submit "Add a Photo", class: 'btn btn-primary' %>
   <% end %>
 </div>
-
-
-<div class="col-10 offset -1">
-<button type="button" class="btn btn-primary btn-lg">
-Add a Photo
-</button>
 
 
 
