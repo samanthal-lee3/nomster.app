@@ -8,7 +8,6 @@
       <% if place.user.present? %>
         <small><%= place.user.email %></small>
       <% end %>
-    </div>
     
 <% if place.comments.present? %>
   <div class="col-12">
@@ -24,11 +23,12 @@
 
 <% if place.photos.present? %>
   <div class = "col 4">
-    <%= image_tag @place.photo.file.to_s %>
+    <% if place.photos.last.present? %>
+    <b><%= place.photos.last %><b>
+    <% end %>
   </div>
 <% end %>
-
-
+</div>
 <% end %>
 
 

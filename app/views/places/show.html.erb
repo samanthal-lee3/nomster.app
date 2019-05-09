@@ -48,10 +48,10 @@
   <% if current_user && current_user == @place.user %>
     <%= link_to 'Edit Place', edit_place_path(@place), class: 'btn btn-primary' %>
 
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#photoModal">
 Upload a Photo
     </button>
-    <div id="myModal" class="modal fade" role="dialog">
+    <div id="photoModal" class="modal fade" role="dialog">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
