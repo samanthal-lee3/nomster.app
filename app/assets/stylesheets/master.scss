@@ -81,3 +81,9 @@ blockquote:before {
 blockquote p {
   display: inline;
 }
+
+.col-centered {
+  float: none;
+  margin-right: auto;
+  margin-left: auto;
+}
