@@ -24,7 +24,7 @@
 <% if place.photos.present? %>
   <div class = "col 4">
     <% if place.photos.last.present? %>
-    <b><%= place.photos.last %><b>
+    <b><%= place.photos.last.to_s %><b>
     <% end %>
   </div>
 <% end %>
