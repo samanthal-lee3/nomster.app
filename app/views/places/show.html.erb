@@ -13,10 +13,6 @@
         <% @place.photos.each do |photo|%>
         <%= image_tag photo.file.to_s %>
         <div class="clear"></div>
-          <figcaption class="figure-caption text-right">
-            <i><%= photo.caption %></i>
-            <% end %>
-          </figcaption>
       </figure>
     </div>
   </div>
